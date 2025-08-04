@@ -28,7 +28,7 @@ const App = () => {
     <div className="body">
       {/* Do not remove the main div */}
 
-      <h1>A Short Narration of Lorem Ipsum</h1>
+      <h1>A short Naration of Lorem Ipsum</h1>
       <div className="section">
         <div className="container">
           {data && (
