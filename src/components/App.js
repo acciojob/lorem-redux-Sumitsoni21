@@ -13,28 +13,36 @@ const App = () => {
   const { data, loading, error } = useSelector((state) => state.lorem || {});
 
   useEffect(() => {
-    dispatch(fetchData);
+    dispatch(fetchData());
   }, [dispatch]);
 
+  if (loading) {
+    return <div>Loading....</div>;
+  }
+
+  if (error) {
+    return <div>Error : {error}</div>;
+  }
+
   return (
-    <div>
+    <div className="body">
       {/* Do not remove the main div */}
 
-      <h1>A Short Narration of lorem Ipsum</h1>
-
-      {loading && <p> Loading......</p>}
-      {error && <p> {error}</p>}
-
-      {data && (
-        <>
-          {data.map((item) => (
-            <div className="box">
-              <p>Title: {item.title}</p>
-              <p>Body: {item.body}</p>
-            </div>
-          ))}
-        </>
-      )}
+      <h1>A Short Narration of Lorem Ipsum</h1>
+      <div className="section">
+        <div className="container">
+          {data && (
+            <>
+              {data.map((item) => (
+                <div className="box">
+                  <p>Title: {item.title}</p>
+                  <p>Body: {item.body}</p>
+                </div>
+              ))}
+            </>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

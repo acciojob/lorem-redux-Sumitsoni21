@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchData = createAsyncThunk("fetchData", () => {
-  return axios.get("https://api.lorem.com/ipsum").then((res) => res.data);
+  return axios.get("https://jsonplaceholder.typicode.com/posts").then((res) => res.data);
 });
 
 const initialState = {
