@@ -16,26 +16,32 @@ const App = () => {
     dispatch(fetchData());
   }, [dispatch]);
 
-  if (loading) {
-    return <h4>Loading....</h4>;
-  }
+  // if (loading) {
+  //   return <h4>Loading....</h4>;
+  // }
 
-  if (error) {
-    return <div>Error : {error}</div>;
-  }
+  // if (error) {
+  //   return <div>Error : {error}</div>;
+  // }
 
   return (
     <div className="body">
       {/* Do not remove the main div */}
 
-      <h4>A short Naration of Lorem Ipsum</h4>
+      <h1>A short Naration of Lorem Ipsum</h1>
+      <h4>
+        Below Contains A title and Body gotten froma random API, Please take
+        your time to Review
+      </h4>
       <div className="section">
         <ul className="container">
+          {loading && <h4>Loading.......</h4>}
+          {error && <h4>Error: {error}</h4>}
           {data && (
             <>
               {data.map((item) => (
                 <li className="box">
-                  <p>Title: {item.title}</p>
+                  <h1>Title: {item.title}</h1>
                   <p>Body: {item.body}</p>
                 </li>
               ))}
