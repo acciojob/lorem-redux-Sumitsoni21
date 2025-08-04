@@ -41,7 +41,7 @@ const App = () => {
             <>
               {/* {data.map((item) => ( */}
                 <li className="box">
-                  <h1 className="title">Title :{data.title}</h1>
+                  <h1 className="title">Title :{data ? data.title : "Loading tiltes"}</h1>
                   <p className="body">Body :{data.body}</p>
                 </li>
               {/* ))} */}
