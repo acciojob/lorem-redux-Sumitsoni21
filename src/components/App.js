@@ -17,7 +17,7 @@ const App = () => {
   }, [dispatch]);
 
   if (loading) {
-    return <div>Loading....</div>;
+    return <h4>Loading....</h4>;
   }
 
   if (error) {
@@ -28,20 +28,20 @@ const App = () => {
     <div className="body">
       {/* Do not remove the main div */}
 
-      <h1>A short Naration of Lorem Ipsum</h1>
+      <h4>A short Naration of Lorem Ipsum</h4>
       <div className="section">
-        <div className="container">
+        <ul className="container">
           {data && (
             <>
               {data.map((item) => (
-                <div className="box">
+                <li className="box">
                   <p>Title: {item.title}</p>
                   <p>Body: {item.body}</p>
-                </div>
+                </li>
               ))}
             </>
           )}
-        </div>
+        </ul>
       </div>
     </div>
   );
