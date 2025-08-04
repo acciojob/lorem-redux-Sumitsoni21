@@ -39,12 +39,12 @@ const App = () => {
           {error && <h4>Error: {error}</h4>}
           {data && (
             <>
-              {data.map((item) => (
+              {/* {data.map((item) => ( */}
                 <li className="box">
-                  <h1 className="title">Title: {item.title}</h1>
-                  <p className="body">Body: {item.body}</p>
+                  <h1 className="title">Title: {data.title}</h1>
+                  <p className="body">Body: {data.body}</p>
                 </li>
-              ))}
+              {/* ))} */}
             </>
           )}
         </ul>
