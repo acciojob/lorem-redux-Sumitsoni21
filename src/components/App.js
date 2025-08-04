@@ -41,8 +41,8 @@ const App = () => {
             <>
               {data.map((item) => (
                 <li className="box">
-                  <h1>Title: {item.title}</h1>
-                  <p>Body: {item.body}</p>
+                  <h1 className="title">Title: {item.title}</h1>
+                  <p className="body">Body: {item.body}</p>
                 </li>
               ))}
             </>
